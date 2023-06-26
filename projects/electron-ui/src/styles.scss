@@ -1,0 +1,9 @@
+// Import Element Theme
+@import '@simpl/element-theme/src/theme';
+
+// Import Element Components
+@import '@simpl/element-ng/simpl-element-ng';
+
+.gms-body {
+  background-color: $element-base-1;
+}

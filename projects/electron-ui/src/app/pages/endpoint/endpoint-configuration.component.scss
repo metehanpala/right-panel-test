@@ -1,0 +1,15 @@
+@import '@simpl/element-theme/src/styles/variables';
+
+.endpoint-button {
+  min-width: 110px !important;
+}
+
+.endpoint-address {
+  min-height: 80px;
+}
+
+.update-info-footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

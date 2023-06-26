@@ -1,0 +1,32 @@
+@import '@simpl/element-theme/src/styles/variables';
+
+.update-info-main {
+  width: 500px;
+  background-color: $element-base-1;
+}
+
+.update-info-footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.update-info-remind {
+  width: 70%;
+}
+
+.update-info-select {
+  width: 120px;
+  float: right;
+  border-radius: var(--element-input-radius);
+  padding: map-get($spacers, 3);
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--input-border-color);
+  outline: none;
+  cursor: pointer;
+}
+
+.update-info-btn-1 {
+  min-width: 120px !important;
+}

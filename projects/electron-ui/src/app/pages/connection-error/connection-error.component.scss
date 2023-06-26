@@ -1,0 +1,11 @@
+@import '@simpl/element-theme/src/styles/variables';
+
+.connection-error-btns {
+  min-width: 100px !important;
+}
+
+.connection-error-footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

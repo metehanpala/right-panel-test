@@ -1,0 +1,28 @@
+{
+  "extends": "../.eslintrc.json",
+  "ignorePatterns": [ "**/environment.prod.ts"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "./tsconfig.app.json",
+          "./tsconfig.spec.json"
+        ]
+      },
+      "rules": {
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "rules": {
+        "@angular-eslint/template/no-inline-styles": "off"
+      }
+    }
+  ]
+}

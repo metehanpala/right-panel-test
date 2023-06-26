@@ -1,0 +1,51 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./www",
+    "types": []
+  },
+    "files": [
+    "src/main.ts",
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ],
+  "paths": {
+    "@gms-flex/services": [
+      "node_modules/@gms-flex/services"
+    ],
+    "@gms-flex/navigation-bar": [
+      "node_modules/@gms-flex/navigation-bar"
+    ],
+
+      "@gms-flex/services-common/*": [
+        "node_modules/@gms-flex/services-common/*"
+      ],
+
+      "@gms-flex/controls/*": [
+        "node_modules/@gms-flex/controls/*"
+      ],
+
+      "@gms-flex/core/*": [
+        "node_modules/@gms-flex/core/*"
+      ],
+      "@gms-flex/about": [
+        "node_modules/@gms-flex/about/*"
+      ],
+      "@gms-flex/snapin-common": [
+        "node_modules/@gms-flex/snapin-common/*"
+      ],
+      "@gms-flex/summary-bar/*": [
+        "node_modules/@gms-flex/summary-bar/*"
+      ],
+       "@angular/*": [
+        "node_modules/@angular/*"
+      ],
+      "@ngx-translate/*": [
+        "node_modules/@ngx-translate/*"
+      ],
+      "rxjs/*": [
+        "node_modules/rxjs/*"
+      ]
+  }
+}

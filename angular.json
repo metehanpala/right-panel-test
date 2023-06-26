@@ -1,0 +1,429 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "gms-application": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "gms",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "sourceMap": {
+              "scripts": true,
+              "styles": true,
+              "vendor": true
+            },
+            "preserveSymlinks": true,
+            "outputPath": "www",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**",
+                "input": "system-use-notification",
+                "output": "/system-use-notification"
+              },
+              {
+                "glob": "**",
+                "input": "config",
+                "output": "/config"
+              },
+              {
+                "glob": "**",
+                "input": "iis-config",
+                "output": "/"
+              },
+              {
+                "glob": "**",
+                "input": "profiles",
+                "output": "/profiles"
+              },
+              {
+                "glob": "**",
+                "input": "i18n",
+                "output": "/i18n"
+              },
+              {
+                "glob": "**",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**",
+                "input": "eula",
+                "output": "/eula"
+              },
+              {
+                "glob": "*/i18n/*.json",
+                "input": "node_modules/@gms-flex",
+                "output": "/@gms-flex"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/controls/i18n",
+                "output": "/@gms-flex/controls/i18n"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/navigation-bar/i18n",
+                "output": "/@gms-flex/navigation-bar/i18n"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/video-management-control/i18n",
+                "output": "/@gms-flex/video-management-control/i18n"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/controls/themes",
+                "output": "/themes"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/controls/assets/fonts",
+                "output": "/fonts"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/controls/assets/fonts",
+                "output": "/@simpl/element-theme/dist/fonts"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/controls/assets/element-icons",
+                "output": "/@simpl/element-icons/dist/fonts"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/controls/assets/marengo-icons",
+                "output": "/@simpl/marengo-icons/dist/fonts"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/services/assets",
+                "output": "/@gms-flex/services/assets"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/notifconfig/assets",
+                "output": "/@gms-flex/notifconfig/assets"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/bim-viewer/profile",
+                "output": "/profiles/extensions"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/bim-viewer-library/assets",
+                "output": "/assets/bim-viewer-library"
+              },
+              {
+                "glob": "*/i18n/*.json",
+                "input": "node_modules/@gms-flex",
+                "output": "/@gms-flex"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/central-function/profile",
+                "output": "/profiles/extensions"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/common-event/profile",
+                "output": "/profiles/extensions"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/snapin-common/i18n",
+                "output": "/@gms-flex/snapin-common/i18n"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/room-overview/profile",
+                "output": "/profiles/extensions"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/plant-overview/profile",
+                "output": "/profiles/extensions"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/video-management/profile",
+                "output": "/profiles/extensions"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/ws-schedule/profile",
+                "output": "/profiles/extensions"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/notification-recipient/profile",
+                "output": "/profiles/extensions"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/nodemap/profile",
+                "output": "/profiles/extensions"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/log-viewer/assets",
+                "output": "/@gms-flex/log-viewer/assets"
+              },
+              {
+                "glob": "**",
+                "input": "node_modules/@gms-flex/powermanager-power-quality/profile",
+                "output": "/profiles/extensions"
+              }
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/signalr/jquery.signalR.min.js"
+            ],
+            "styles": [
+              "src/styles.scss",
+              "node_modules/@gms-flex/essentials-theme/src/hfw-theme.scss",
+              "node_modules/@siemens/ngx-datatable/index.scss",
+              "node_modules/@siemens/ngx-datatable/themes/bootstrap.scss",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules"
+              ]
+            },
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "development": {
+              "sourceMap": {
+                "scripts": true,
+                "styles": true,
+                "vendor": true
+              }
+            },
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": {
+                "scripts": true,
+                "styles": true,
+                "vendor": true
+              },
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "10mb",
+                  "maximumError": "10mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": ""
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "gms-application:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "gms-application:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "gms-application:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "gms-application:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "gms-application:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "electron-ui": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/electron-ui",
+      "sourceRoot": "projects/electron-ui/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "deleteOutputPath": false,
+            "outputPath": "dist/electron-ui",
+            "index": "projects/electron-ui/src/index.html",
+            "main": "projects/electron-ui/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/electron-ui/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/electron-ui/src/favicon.ico",
+              "projects/electron-ui/src/assets",
+              {
+                "glob": "**",
+                "input": "system-use-notification",
+                "output": "/system-use-notification"
+              },
+              {
+                "glob": "product-settings.json",
+                "input": "config",
+                "output": "/config/"
+              }
+            ],
+            "styles": [
+              "projects/electron-ui/src/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules"
+              ]
+            },
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/electron-ui/src/environments/environment.ts",
+                  "with": "projects/electron-ui/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "electron-ui:build:production"
+            },
+            "development": {
+              "browserTarget": "electron-ui:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "electron-ui:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/electron-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/electron-ui/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/electron-ui/src/favicon.ico",
+              "projects/electron-ui/src/assets"
+            ],
+            "styles": [
+              "projects/electron-ui/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "aeb5a078-5154-42a0-8b48-120e774b990b"
+  }
+}
